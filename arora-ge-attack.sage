@@ -35,7 +35,7 @@ def gen_poly(a, c):
 # generating monomials
 mons = []
 for b in range(1, 2*B + 1 + 1): # dont include 1
-    temp = list(WeightedIntegerVectors(b, [1] * 16))
+    temp = list(WeightedIntegerVectors(b, [1] * n))
     for dist in temp:
         vs = list(map(lambda t: t[1]^dist[t[0]], enumerate(xs[::-1])))
         mons += [mul(vs)] 
